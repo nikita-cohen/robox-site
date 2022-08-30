@@ -1,0 +1,1227 @@
+@font-face {
+    font-family: Montserrat;
+    src: local('Montserrat-ExtraBold'), url(../assets/font/Montserrat-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: local('Montserrat-Medium'), url(../assets/font/Montserrat-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: local('Montserrat-Bold'), url(../assets/font/Montserrat-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: local('Montserrat-Regular'), url(../assets/font/Montserrat-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main-container-trade {
+    width: 100%;
+    background: #060D23;
+    min-height: 100vh;
+}
+
+.inner-container-trade {
+    width: 100%;
+    height: 753px;
+}
+
+.rating-container-trade {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    filter: drop-shadow(0 4px 75px #000000);
+}
+
+.rating-stars-trade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #060D23 url("../assets/image/trade-main-background.svg")  no-repeat;
+    background-position: 50px 400px !important;
+    -webkit-clip-path: url(#svgStars);
+    clip-path: url(#svgStars);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 74.5%, 50% 100%, 0% 70.8%, 0% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 74.5%, 50% 100%, 0% 70.8%, 0% 50%);
+}
+
+.container-for-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-back {
+    position: absolute;
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.nav-text.selected {
+    color: #9AFF07;
+}
+
+.desc-header-con-trade {
+    display: flex;
+}
+
+.amount-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: white;
+    cursor: default;
+}
+
+.sign-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #9AFF07;
+    cursor: default;
+    margin-top: 6px;
+}
+
+.desc-trade {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    color: white;
+    cursor: default;
+    text-align: left;
+
+}
+
+.txt-container-trade-diamond {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc-con-trade {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.diamond-amount {
+    display: flex;
+}
+
+.trade-diamond-img {
+    margin-left: -50px;
+}
+
+.trade-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.trade-option-header {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    color: white;
+    cursor: default;
+    text-align: left;
+    margin-left: 8px;
+}
+
+.trade-option-header-gold {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    background: -webkit-linear-gradient(180deg, #FFFFC8 0%, #97793D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.buttons-trade-options {
+    display: flex;
+    margin-top: 16px;
+}
+
+.row-trade-options-btn {
+    display: flex;
+}
+
+.selected-trade-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    width: 91px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(154, 255, 7, 0.21), rgba(154, 255, 7, 0.21));
+    border: 2px solid #9AFF07;
+    box-shadow: 0 0 7px 0 #B6FF00;
+    cursor: default;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.selected-txt-option {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 32px;
+    color: white;
+    text-align: left;
+    margin-top: -5px;
+
+}
+
+.trade-option {
+    height: 56px;
+    width: 90px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #000618, #000618);
+    border: 1px solid #9AFF07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.img-option {
+    opacity: 0.32;
+}
+
+.second-desc-header-options {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: white;
+    text-align: left;
+    margin-left: 8px;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.rate-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-desktop-con {
+    display: flex;
+}
+
+.rate-coin-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    color: white;
+    cursor: default;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.rate-coin-txt-desc {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    background: -webkit-linear-gradient(180deg, #FFFFC8 0%, #97793D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 22px;
+    margin-left: 10px;
+}
+
+.rate-coin-txt-desc.mob {
+    display: none;
+}
+
+.even-img {
+    margin-left: 16px;
+}
+
+.diamond-rate-img {
+    margin-left: 20px;
+}
+
+.rate-coin-txt-diamond {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    color: white;
+    cursor: default;
+    margin-top: 15px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.rate-coin-txt-desc-game {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: white;
+    cursor: default;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.rate-coin-txt-desc-game.mob {
+    display: none;
+}
+
+.up-headers {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-main-end-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 77px;
+}
+
+.green-btn-widrow {
+    height: 56px;
+    width: 302px;
+    border-radius: 4px;
+    background: #9AFF07;
+    box-shadow: 0 -4px 2px 0 #000000A6 inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.green-btn-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #060D23;
+}
+
+.btn-desc-green {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    cursor: default;
+    color: #8B91A6;
+    margin-top: 9px;
+}
+
+.btn-price {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: default;
+    text-align: center;
+    color: white;
+}
+
+.middle-trade {
+    margin-top: -220px;
+    width: 100%;
+    height: 700px;
+    background: #060D23 url("../assets/image/middle-trade-background.svg") top right no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container-trade-middle {
+    width: 75%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.img-trade-barkod {
+    width: 302px;
+    height: 302px;
+    margin-top:150px
+}
+
+.footer-trade {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 1435px) {
+    .buttons-trade-options {
+        flex-direction: column;
+    }
+
+    .trade-option-header {
+        text-align: center;
+    }
+
+    .rate-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .second-desc-header-options {
+        text-align: center;
+    }
+
+    .rate-coin-txt-desc.mob {
+        display: block;
+    }
+
+    .rate-coin-txt-desc {
+        display: none;
+    }
+
+    .rate-coin-txt-desc-game.mob {
+        display: flex;
+        margin-top: 22px;
+        margin-left: 75px;
+    }
+
+    .rate-coin-txt-desc-game {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1350px) {
+
+
+    .middle-trade {
+        margin-top: 1px;
+    }
+
+    .txt-container-trade-diamond {
+        flex-direction: column;
+    }
+
+    .inner-container-trade {
+        width: 100%;
+        height: 944px;
+    }
+
+    .rating-container-trade {
+        height: 100%;
+
+    }
+
+    .rating-stars-trade {
+        background: #060D23 none;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90.3%, 0% 100%, 0% 90.3%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90.3%, 0% 100%, 0% 90.3%);
+    }
+
+    .diamond-amount {
+        justify-content: center;
+    }
+
+    .row-trade-options-btn {
+        justify-content: center;
+    }
+
+    .button-main-end-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-trade-barkod {
+        display: none;
+    }
+
+    .inner-container-trade-middle {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
+.header-container {
+    width: 100%;
+    height: 735px;
+
+}
+
+
+
+.small-back {
+    display: none;
+}
+
+.inner-container {
+    width: 90%;
+}
+
+.before-inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav-bar-main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 25px;
+}
+
+
+
+.logo-img {
+    width: 74px;
+    height: 56px;
+}
+
+.header-first-word {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: left;
+    color: white;
+}
+
+.header-second-word {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: left;
+    color: #9AFF07;
+}
+
+.logo-words {
+    display: flex;
+    margin-top: 17px;
+    margin-left: 10px;
+}
+
+.left-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.nav-text {
+    margin-left: 24px;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+}
+
+.profile-btn {
+    background: #060D23;
+    margin-top: 16px;
+    border: 2px solid #9AFF07;
+    height: 52px;
+    width: 133px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-btn-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #9AFF07;
+}
+
+
+.menu-bar {
+    display: none;
+    width: 54px;
+    height: 36px;
+}
+
+.mobile-back-main {
+    width: 654px;
+    height: 393px;
+    mix-blend-mode: overlay;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 129px;
+}
+
+.white-text {
+    font-family: Montserrat, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: white;
+    cursor: default;
+}
+
+.gold-text {
+    font-family: Montserrat, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    cursor: default;
+    background: -webkit-linear-gradient(180deg, #FFFFC8 0%, #97793D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desc-text-main {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    cursor: default;
+    color: white;
+    max-width: 772px;
+    margin-top: 16px;
+}
+
+.button-get-free-robux {
+    margin-top: 39px;
+    height: 52px;
+    width: 220px;
+    border-radius: 4px;
+    background: linear-gradient(180deg, #9AFF07 0%, #9AFF07 100%);
+    box-shadow: 0 -4px 2px 0 #000000A6 inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.get-free-text-btn {
+    font-family: Montserrat,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #060D23;
+}
+
+.button-up-down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.inner-container-second-layer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.options-bar {
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    background: #060D23 url("../assets/image/second-stage-background.svg") no-repeat center;
+    background-blend-mode: overlay;
+}
+
+.options-bar-header-text {
+    margin-top: 85px;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: white;
+    cursor: default;
+}
+
+.desc-second-layer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow-up {
+    margin-top: -130px;
+}
+
+.chain-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 302px;
+    justify-content: center;
+    align-items: center;
+}
+
+.chain-container.first {
+    margin-top: 16px;
+}
+
+.chain-container.four {
+    margin-top: 101px;
+}
+
+
+.icon-desc-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: default;
+    color: #8B91A6;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.icon-name-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: default;
+    color: white;
+    text-align: center;
+
+}
+
+.icon-wh {
+    width: 174px;
+    height: 182px;
+}
+
+.icon-wh.coin {
+    width: 130px;
+    height: 130px;
+}
+
+.google-play-inner-container {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.google-play-txt-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 628px;
+    margin-top: 200px;
+}
+
+.header-google-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: white;
+    cursor: default;
+}
+
+.inner-header-google-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    background: -webkit-linear-gradient(180deg, #FFFFC8 0%, #97793D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+}
+
+.small-desc-header-google-play {
+    margin-top: 16px;
+    cursor: default;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+    text-align: left;
+
+}
+
+.small-desc-google-play {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    cursor: default;
+    color: white;
+}
+
+.btn-container-google {
+    display: flex;
+    position: relative;
+}
+
+.btn {
+    cursor: pointer;
+    margin-top: 32px;
+}
+
+.game-obj {
+    position: absolute;
+    margin-left: 260px;
+    margin-top: -40px;
+    filter : drop-shadow(0 0 24px  #09194B);
+}
+
+.barkod-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.diamonds-google {
+    z-index: 5;
+    margin-top: -80px;
+}
+
+.barkod-img {
+    z-index: 6;
+    width: 302px;
+    height: 302px;
+    margin-left: 120px;
+    margin-top: -88px;
+}
+
+.img-desc {
+    display: none;
+}
+
+.btn-for-mobile {
+    display: none;
+}
+
+.main-footer {
+    height: 1200px;
+    background: #060D23 url("../assets/image/footer-back.svg") center top no-repeat;
+    background-size: contain;
+    margin-top: -192px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container-main {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-header {
+    font-family: Montserrat, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: white;
+    cursor: default;
+    margin-top: 163px;
+}
+
+.FAQ-container {
+    width: 100%;
+    height: auto;
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-open {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #9AFF07;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 32px 24px 32px;
+    background: #000618;
+    margin-top: 5px;
+
+}
+
+.minus {
+    cursor: pointer;
+}
+
+.q {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inner-FAQ-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.q-txt {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: left;
+    color: white;
+    cursor: default;
+}
+
+.q-desc {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    color: #8B91A6;
+    cursor: default;
+}
+
+.faq {
+    padding: 24px 32px 24px 32px;
+    margin-top: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #46FFF429;
+}
+
+.q-txt-close {
+    margin-top: 13px;
+    cursor: default;
+}
+
+.logo-footer {
+    width: 90%;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.footer-txt-down {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    color: #8B91A6;
+    margin-left: 44px;
+    margin-top: 18px;
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    .barkod-container {
+        display: none;
+    }
+
+    .google-play {
+        background: #060D23 url("../assets/image/mobile-google-background.svg") center right no-repeat;
+        background-blend-mode: overlay;
+        -webkit-clip-path: url(#svgthree);
+        clip-path: url(#svgthree);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 96.3%, 50% 100%, 0% 96.8%, 0% 100%, 0% 97%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 96.3%, 50% 100%, 0% 96.8%, 0% 100%, 0% 97%);
+    }
+
+    .inner-header-google-txt {
+        background: #9AFF07;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .btn-container-google {
+        display: none;
+    }
+
+    .google-play-inner-container {
+        width: 90%;
+    }
+
+    .small-desc-google-play {
+        width: 104px;
+    }
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .img-desc {
+        display: flex;
+        margin-top: -35px;
+        filter: drop-shadow(0px 0px 24px #09194B);
+    }
+
+    .btn-for-mobile {
+        display: flex;
+        cursor: pointer;
+        width: 288px;
+        height: 77px;
+    }
+
+    .google-play {
+        height: 580px;
+    }
+
+    .google-play-txt-container {
+        margin-top: 50px;
+    }
+
+    .google-play-container {
+
+    }
+}
+
+
+@media only screen and (max-width: 1180px) {
+    .arrow-up {
+        display: none;
+    }
+
+    .arrow-down {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+    .logo.trade-logo {
+        display: none;
+    }
+
+    .small-back {
+        display: flex;
+    }
+
+    .button-up-down {
+        display: none;
+    }
+
+    .desc-text-main {
+        margin-top: 24px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .left-nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-container {
+        margin-top: 32px;
+    }
+
+    .logo {
+        margin-top: 50px;
+    }
+
+    .menu-bar {
+        display: block;
+        margin-top: 26px;
+    }
+
+    .rating-stars {
+        flex-direction: column;
+        display: flex;
+        height: 1100px;
+        background: #060D23 url("../assets/image/mobile-background.svg") left top no-repeat;
+        background-blend-mode: overlay;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 96.3%, 50% 100%, 0% 96.8%, 0% 100%, 0% 97%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 96.3%, 50% 100%, 0% 96.8%, 0% 100%, 0% 97%);
+    }
+
+    .rating-container {
+        height: 1200px;
+    }
+    .header-container {
+        height: 1200px;
+    }
+
+    .logo-footer {
+        flex-direction: column;
+    }
+
+    .footer-txt-down {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .footer-container-main {
+        width: 90%;
+    }
+
+
+}
+
+@media only screen and (max-width: 890px) {
+    .options-bar {
+        justify-content: center;
+        background: #060D23;
+        align-items: center;
+        height: 1464px;
+    }
+
+    .desc-second-layer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .options-bar-header-text {
+        margin-top: 0;
+    }
+
+}
+
+@media only screen and (max-width: 655px) {
+    .button-get-free-robux {
+        margin-top: 32px;
+        width: 288px;
+    }
+
+    .rating-stars {
+        background: #060D23 url("../assets/image/mobile-background.svg") center top no-repeat;
+        background-blend-mode: overlay;
+    }
+
+    .rating-container {
+        height: 1100px;
+    }
+
+    .header-container {
+        height: 1200px;
+    }
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .small-back {
+        width: 320px;
+    }
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .small-back {
+        width: 320px;
+    }
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+    }
+
+    .main-footer {
+        height: 1400px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    .on-mobile-google {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
